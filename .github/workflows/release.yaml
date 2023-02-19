@@ -2,6 +2,8 @@ name: release
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 10 * * *'
 env:
   version: version-v21.1
 jobs:
