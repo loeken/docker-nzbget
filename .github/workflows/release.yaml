@@ -19,6 +19,6 @@ jobs:
         uses: docker/build-push-action@1104d471370f9806843c095c1db02b5a90c5f8b6 # v3
         with:
           push: true
-          tags: loeken/nzbget:version-v21.1
+          tags: loeken/nzbget:v24.5-ls182
           context: .
           no-cache: true

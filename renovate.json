@@ -7,13 +7,13 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [".github/workflows/release.yml"],
+      "fileMatch": [".github/workflows/release.yml", "Dockerfile"],
       "matchStrings": [
-        "tags:\\s*loeken/nzbget:(?<currentValue>version-[\\w\\d.-]+)"
+        "tags:\\s*loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
       ],
       "datasourceTemplate": "docker",
       "packageNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "docker"
+      "versioningTemplate": "loose"
     }
   ]
 }
