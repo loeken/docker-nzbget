@@ -3,11 +3,17 @@
   "prConcurrentLimit": 0,
   "branchConcurrentLimit": 0,
   "prHourlyLimit": 0,
-  "packageRules": [
+  "pinDigests": true,
+  "customManagers": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "customType": "regex",
+      "fileMatch": [".github/workflows/release.yml"],
+      "matchStrings": [
+        "tags:\\s*loeken/nzbget:(?<currentValue>[\\d\\.]+)"
+      ],
+      "datasourceTemplate": "github-releases",
+      "packageNameTemplate": "linuxserver/nzbget",
+      "versioningTemplate": "semver"
     }
-  ],
-  "pinDigests": true
+  ]
 }
