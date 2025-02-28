@@ -1,2 +1,2 @@
-FROM linuxserver/nzbget:version-v21.1
+FROM linuxserver/nzbget:version-v21.1@sha256:ed58a6471591126adee01e704d35264979640bede1fca7ffa13a21d6643c5a18
 RUN apk upgrade
