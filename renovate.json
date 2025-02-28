@@ -9,11 +9,11 @@
       "customType": "regex",
       "fileMatch": [".github/workflows/release.yml"],
       "matchStrings": [
-        "tags:\\s*loeken/nzbget:version-(?<currentValue>[\\d\\.]+)"
+        "tags:\\s*loeken/nzbget:(?<currentValue>version-[\\w\\d.-]+)"
       ],
       "datasourceTemplate": "docker",
       "packageNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "loose"
+      "versioningTemplate": "docker"
     }
   ]
 }
