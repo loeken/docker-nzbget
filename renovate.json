@@ -14,9 +14,7 @@
       "datasourceTemplate": "docker",
       "packageNameTemplate": "linuxserver/nzbget",
       "versioningTemplate": "loose",
-      "extractVersionTemplate": "v${version}-ls${lsVersion}",
-      "lookupNameTemplate": "linuxserver/nzbget",
-      "versioning": "docker"
+      "extractVersionTemplate": "${currentValue}-ls${lsVersion}"
     }
   ]
 }
