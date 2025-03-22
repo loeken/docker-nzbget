@@ -10,7 +10,7 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "docker"
+      "versioningTemplate": "loose"
     }
   ],
   "packageRules": [
