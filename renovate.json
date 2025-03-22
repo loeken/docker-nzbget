@@ -6,17 +6,18 @@
     {
       "customType": "regex",
       "fileMatch": ["^\\.github/workflows/release\\.ya?ml$"],
-      "matchStrings": ["loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"],
+      "matchStrings": ["image:\\s*loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"],
       "datasourceTemplate": "docker",
       "depNameTemplate": "linuxserver/nzbget",
       "versioningTemplate": "loose",
-      "autoReplaceStringTemplate": "loeken/nzbget:{{newValue}}"
+      "autoReplaceStringTemplate": "image: \"loeken/nzbget:{{newValue}}\""
     }
   ],
   "packageRules": [
     {
       "matchPackageNames": ["linuxserver/nzbget"],
-      "groupName": "linuxserver/nzbget image updates"
+      "groupName": "linuxserver/nzbget image updates",
+      "allowedVersions": ".*-ls\\d+$"
     }
   ]
 }
