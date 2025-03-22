@@ -11,7 +11,7 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "loose",
+      "versioningTemplate": "regex",
       "autoReplaceStringTemplate": "image: \"loeken/nzbget:{{newValue}}\""
     }
   ],
@@ -19,7 +19,7 @@
     {
       "matchPackageNames": ["linuxserver/nzbget"],
       "groupName": "linuxserver/nzbget image updates",
-      "versioning": "loose",
+      "versioning": "regex",
       "allowedVersions": "v\\d+\\.\\d+-ls\\d+"
     }
   ]
