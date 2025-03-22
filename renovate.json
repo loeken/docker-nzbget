@@ -6,12 +6,11 @@
     {
       "customType": "regex",
       "fileMatch": ["^\\.github/workflows/release\\.ya?ml$"],
-      "matchStrings": [
-        "loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
-      ],
+      "matchStrings": ["loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"],
       "datasourceTemplate": "docker",
       "depNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "loose"
+      "versioningTemplate": "loose",
+      "autoReplaceStringTemplate": "loeken/nzbget:{{newValue}}"
     }
   ],
   "packageRules": [
