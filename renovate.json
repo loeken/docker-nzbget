@@ -11,8 +11,7 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "loose",
-      "extractVersion": "^v\\d+\\.\\d+-ls\\d+$"
+      "versioningTemplate": "loose"
     }
   ],
   "packageRules": [
