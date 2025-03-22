@@ -18,7 +18,8 @@
   "packageRules": [
     {
       "matchPackageNames": ["linuxserver/nzbget"],
-      "groupName": "linuxserver/nzbget image updates"
+      "groupName": "linuxserver/nzbget image updates",
+      "versioning": "loose"
     }
   ]
 }
