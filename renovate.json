@@ -4,17 +4,19 @@
   "branchConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "pinDigests": true,
+  
   "customManagers": [
     {
       "customType": "regex",
       "fileMatch": [".github/workflows/release.yaml", "Dockerfile"],
       "matchStrings": [
-        "tags:\\s*loeken/nzbget:v(?<currentValue>\\d+\\.\\d+)-ls(?<lsVersion>\\d+)"
+        "tags:\\s*loeken/nzbget:v(?<currentValue>\\d+\\.\\d+-ls\\d+)"
       ],
       "datasourceTemplate": "docker",
       "packageNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "loose",
-      "extractVersionTemplate": "${currentValue}-ls${lsVersion}"
+      "versioningTemplate": "loose"
     }
   ]
+
+  
 }
