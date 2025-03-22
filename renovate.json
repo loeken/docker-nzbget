@@ -19,7 +19,9 @@
     {
       "matchPackageNames": ["linuxserver/nzbget"],
       "groupName": "linuxserver/nzbget image updates",
-      "versioning": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)-ls(?<patch>\\d+)$"
+      "versioning": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)-ls(?<patch>\\d+)$",
+      "automerge": true,
+      "automergeType": "pr"
     }
   ]
 }
