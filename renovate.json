@@ -14,8 +14,13 @@
       "datasourceTemplate": "docker",
       "packageNameTemplate": "linuxserver/nzbget",
       "versioningTemplate": "loose",
-      "extractVersionTemplate": "^v\\d+\\.\\d+-ls\\d+$",
-      "dockerRegistryUrls": ["https://index.docker.io"]
+      "extractVersionTemplate": "^v\\d+\\.\\d+-ls\\d+$"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["linuxserver/nzbget"],
+      "registryUrls": ["https://index.docker.io"]
     }
   ]
 }
