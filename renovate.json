@@ -14,7 +14,7 @@
       "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)-ls(?<patch>\\d+)$",
       "autoReplaceStringTemplate": "tags: loeken/nzbget:{{newValue}}"
     }
-  ]
+  ],
   "packageRules": [
     {
       "matchPackageNames": ["linuxserver/nzbget"],
