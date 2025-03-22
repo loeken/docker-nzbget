@@ -1,22 +1,25 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "pinDigests": true,
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["^\\.github/workflows/release\\.ya?ml$"],
       "matchStrings": [
-        "loeken/nzbget:(?<currentValue>v\\d+(?:\\.\\d+)?-ls\\d+)"
+        "loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "loose"
+      "versioningTemplate": "loose",
+      "extractVersion": "^v\\d+\\.\\d+-ls\\d+$"
     }
   ],
   "packageRules": [
     {
       "matchPackageNames": ["linuxserver/nzbget"],
-      "groupName": "linuxserver/nzbget image updates"
+      "groupName": "linuxserver/nzbget image updates",
+      "allowedVersions": "^v\\d+\\.\\d+-ls\\d+$"
     }
   ]
 }
