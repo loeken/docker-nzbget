@@ -14,8 +14,7 @@
       "datasourceTemplate": "docker",
       "packageNameTemplate": "linuxserver/nzbget",
       "versioningTemplate": "loose",
-      "extractVersionTemplate": "^v\\d+\\.\\d+-ls\\d+$",
-      "replaceStringTemplate": "tags: loeken/nzbget:{{{newValue}}}"
+      "extractVersionTemplate": "^v\\d+\\.\\d+-ls\\d+$"
     }
   ]
 }
