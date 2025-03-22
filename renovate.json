@@ -20,7 +20,23 @@
   "packageRules": [
     {
       "matchPackageNames": ["linuxserver/nzbget"],
-      "registryUrls": ["https://index.docker.io"]
+      "datasource": "docker",
+      "registryUrls": ["https://index.docker.io"],
+      "versioning": "loose"
     }
-  ]
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [".github/workflows/release.yaml"],
+      "matchStrings": [
+        "tags:\\s*loeken/nzbget:(?<currentValue>v?\\d+\\.\\d+-ls\\d+)"
+      ],
+      "datasourceTemplate": "docker",
+      "packageNameTemplate": "linuxserver/nzbget",
+      "versioningTemplate": "loose"
+    }
+  ],
+  "docker": {
+    "enable": true
+  }
 }
