@@ -1,25 +1,21 @@
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "pinDigests": true,
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["^\\.github/workflows/release\\.ya?ml$"],
-      "matchStrings": [
-        "image:\\s*loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
-      ],
-      "datasourceTemplate": "docker",
-      "depNameTemplate": "linuxserver/nzbget",
-      "versioningTemplate": "loose",
-      "autoReplaceStringTemplate": "image: \"loeken/nzbget:{{newValue}}\""
-    }
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["linuxserver/nzbget"],
-      "groupName": "linuxserver/nzbget image updates",
-      "versioning": "loose"
-    }
-  ]
-}
+"customManagers": [
+  {
+    "customType": "regex",
+    "fileMatch": ["^\\.github/workflows/release\\.ya?ml$"],
+    "matchStrings": [
+      "image:\\s*loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
+    ],
+    "datasourceTemplate": "docker",
+    "depNameTemplate": "linuxserver/nzbget",
+    "versioningTemplate": "loose",
+    "autoReplaceStringTemplate": "image: \"loeken/nzbget:{{newValue}}\""
+  }
+],
+"packageRules": [
+  {
+    "matchPackageNames": ["linuxserver/nzbget"],
+    "groupName": "linuxserver/nzbget image updates",
+    "versioning": "loose",
+    "allowedVersions": "v\\d+\\.\\d+-ls\\d+"
+  }
+]
