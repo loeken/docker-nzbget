@@ -7,14 +7,14 @@
       "customType": "regex",
       "fileMatch": ["^\\.github/workflows/release\\.ya?ml$"],
       "matchStrings": [
-        "image:\\s*loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
+        "tags:\\s*loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "linuxserver/nzbget",
       "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)-ls(?<patch>\\d+)$",
-      "autoReplaceStringTemplate": "image: \"loeken/nzbget:{{newValue}}\""
+      "autoReplaceStringTemplate": "tags: loeken/nzbget:{{newValue}}"
     }
-  ],
+  ]
   "packageRules": [
     {
       "matchPackageNames": ["linuxserver/nzbget"],
