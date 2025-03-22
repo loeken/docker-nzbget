@@ -9,7 +9,7 @@
       "customType": "regex",
       "fileMatch": [".github/workflows/release.yaml"],
       "matchStrings": [
-        "tags:\\s*loeken/nzbget:v(?<currentValue>\\d+\\.\\d+-ls\\d+)"
+        "tags:\\s*loeken/nzbget:(?<currentValue>v\\d+\\.\\d+-ls\\d+)"
       ],
       "datasourceTemplate": "docker",
       "packageNameTemplate": "linuxserver/nzbget",
