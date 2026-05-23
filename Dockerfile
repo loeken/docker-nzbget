@@ -1,1 +1,1 @@
-FROM linuxserver/nzbget:v26.1-ls243@sha256:56e92b2eb265b79bbf502a8fc8a59aa9d5dbf48d9681a251b92bce1c1718ecae
+FROM linuxserver/nzbget:v26.1-ls244@sha256:56556fe5a0acc3a120012e6324ce47b1151a60a6cf7d95d237e4e832e8bec1e0
